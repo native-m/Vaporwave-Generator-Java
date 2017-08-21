@@ -48,7 +48,7 @@ public class Vaporwave
       case ' ':
       case '\r':
       case '\n':
-      	str[i] = str[i];
+      	continue;
         break;
       default:
         if(str[i] >= 0x0020 && str[i] <= 0xC0)
@@ -56,7 +56,7 @@ public class Vaporwave
         	str[i] = (char)(0xFF00 | str[i] - 0x0020);
         }        
         else
-          str[i] = str[i];
+          continue;
         break;
       }
     }
